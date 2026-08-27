@@ -1,8 +1,5 @@
-import Calculator
-
+import calculator
 def main():
-    print("...Math Calculator Module...")
-
     try:
         num1 = float(input("Enter your first number: "))
         num2 = float(input("Enter your second number: "))
@@ -13,21 +10,23 @@ def main():
         print("3. Multiplication")
         print("4. Division")
 
-        choice = input("Enter your choice")
-
+        choice = input("\nEnter your choice: ")
         if choice == "1":
-            result = Calculator.addition(num1, num2)
+            return calculator.addition(num1, num2)
         elif choice == "2":
-            result = Calculator.subtraction(num1, num2)
+            return calculator.subtraction(num1, num2)
         elif choice == "3":
-            result = Calculator.multiplication(num1, num2)
+            return calculator.multiplication(num1, num2)
         elif choice == "4":
-            result = Calculator.division(num1, num2)
+            return calculator.division(num1, num2)
         else:
             print("Invalid choice")
-        print("Result:", result)
-
     except ValueError:
-        print("Please enter valid numbers")
+        print("Invalid input. Please enter a number.")
+    except ZeroDivisionError:
+        print("Error: cannot be divided by zero")
+
 if __name__ == "__main__":
-    main()
+    result = main()
+    if result is not None:
+        print(f"Result: {result}")

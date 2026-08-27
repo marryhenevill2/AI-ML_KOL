@@ -3,10 +3,10 @@ while True:
         num1 = float(input("Enter your first number: "))
         num2 = float(input("Enter your second number: "))
 
-        result = num1 / num2
-        print("Result:", result)
+        num1 / num2
+        print("Result:", num1 / num2)
         break
     except ValueError:
-        print("\nError: Please enter only numbers\n")
+        print("Invalid input. Please enter a valid number.")
     except ZeroDivisionError:
-        print("\nError: Please enter a non-zero second number\n")
+        print("Error: Division by zero is not allowed.")

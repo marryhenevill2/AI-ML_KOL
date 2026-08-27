@@ -1,12 +1,11 @@
 import math
 import random
 
-num = float(input("Enter a number: "))
+num1 = float(input("Enter your first number: "))
 
-square_root = math.sqrt(num)
+square_root = math.sqrt(num1)
 
 random_number = random.randint(1, 100)
 
-print("Square root:", square_root)
-print("Random number:", random_number)
-
+print(f"The square root: {square_root}")
+print(f" The random number: {random_number}")
